@@ -17,7 +17,11 @@ return require('packer').startup(function(use)
 
     use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
     use('nvim-treesitter/playground')
+
     use('NLKNguyen/papercolor-theme')
+    use('morhetz/gruvbox')
+    use('sainnhe/sonokai')
+
     use('ThePrimeagen/harpoon')
     use('mbbill/undotree')
     use('tpope/vim-fugitive')
@@ -38,4 +42,25 @@ return require('packer').startup(function(use)
     }
     use('jose-elias-alvarez/null-ls.nvim')
     use('MunifTanjim/prettier.nvim')
+    use('m4xshen/autoclose.nvim')
+
+    use("tpope/vim-surround")
+    use("tpope/vim-repeat")
+    use("rhysd/clever-f.vim")
+    use {
+        "folke/todo-comments.nvim",
+        requires = "nvim-lua/plenary.nvim",
+        config = function() require("todo-comments").setup {} end
+    }
+        use({
+        "folke/trouble.nvim",
+        config = function()
+            require("trouble").setup {
+                icons = false
+                -- your configuration comes here
+                -- or leave it empty to use the default settings
+                -- refer to the configuration section below
+            }
+        end
+    })
 end)

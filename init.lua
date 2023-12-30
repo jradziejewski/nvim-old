@@ -1,6 +1,4 @@
 require("core")
-vim.o.background = "dark"
-vim.cmd[[colorscheme PaperColor]]
 
 local prettier = require("prettier")
 
@@ -21,3 +19,4 @@ prettier.setup({
     "yaml",
   },
 })
+
